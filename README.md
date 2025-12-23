@@ -97,4 +97,4 @@ Processed data is stored in a **clean and structured format**.
 ---
 
 ## 📊 Dashboard Preview
-![Power BI Dashboard](powerbi/dashboard_screenshots.png)
+![Power BI Dashboard](PowerBI/dashboard_screenshots.png)
