@@ -26,7 +26,7 @@ Microsoft Fabric, Data Factory, PySpark, and Power BI.
 - Power BI
 
 ## 📊 Dashboard Preview
-![Dashboard](powerbi/dashboard_screenshots.png)
+![Dashboard](PowerBI/dashboard_screenshots.png)
 
 ## 📌 Key Learnings
 - End-to-end data pipeline design
