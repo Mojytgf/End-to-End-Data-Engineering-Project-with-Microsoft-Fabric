@@ -1,35 +1,100 @@
-# End-to-End Data Project with Microsoft Fabric
+# End-to-End Data Engineering Project with Microsoft Fabric
 
 ## 🚀 Project Overview
-This project demonstrates an end-to-end data engineering pipeline using
-Microsoft Fabric, Data Factory, PySpark, and Power BI.
+This project demonstrates the design and implementation of an end-to-end
+data engineering pipeline using **Microsoft Fabric**.
+The objective is to ingest raw data, store it in a Lakehouse, transform it
+using PySpark, and visualize insights using Power BI.
 
-## 🏗️ Architecture
-- Data Source: Public API (Earthquake data)
-- Ingestion: Microsoft Fabric Data Factory
-- Storage: OneLake (Lakehouse)
-- Transformation: PySpark Notebooks
-- Visualization: Power BI
+The project follows modern **ELT architecture** and best practices used
+in real-world data platforms.
 
-## 🔄 Data Pipeline
-1. Extract data from API using Data Factory
-2. Store raw data in OneLake
-3. Transform data using PySpark (Data Engineering)
-4. Load curated data into Power BI
-5. Build interactive dashboards
+---
+
+## 🏗️ Architecture Overview
+The pipeline is composed of the following layers:
+
+1. **Data Source**
+2. **Data Ingestion**
+3. **Raw Storage (Bronze Layer)**
+4. **Data Transformation (Silver & Gold Layers)**
+5. **Analytics & Visualization**
+
+---
+
+## 📥 Step 1: Data Source
+- Public external data source (API / JSON data)
+- Data retrieved in semi-structured format
+- Represents raw operational data to be analyzed
+
+---
+
+## 🔄 Step 2: Data Ingestion (Data Factory)
+- Microsoft Fabric **Data Factory** is used to orchestrate data ingestion
+- A pipeline is created to:
+  - Extract data from the source
+  - Store the raw data in OneLake
+- The pipeline can be scheduled or triggered manually
+
+---
+
+## 🗄️ Step 3: Raw Data Storage (Bronze Layer)
+- Raw data is stored in **OneLake (Lakehouse)** under the `Files/` directory
+- Data is kept **unchanged** to preserve the original source
+- File formats used: JSON / CSV
+
+This layer acts as the **single source of truth**.
+
+---
+
+## ⚙️ Step 4: Data Transformation (PySpark – Silver Layer)
+- PySpark notebooks are used for data processing
+- Operations performed:
+  - Schema inference and validation
+  - Data cleansing (nulls, duplicates, invalid values)
+  - Type casting and standardization
+  - Basic filtering and enrichment
+
+Processed data is stored in a **clean and structured format**.
+
+---
+
+## 🥇 Step 5: Curated Data (Gold Layer)
+- Business-ready datasets are created
+- Aggregations and metrics are calculated
+- Optimized tables are prepared for analytics consumption
+- Stored as Lakehouse tables for easy access by Power BI
+
+---
+
+## 📊 Step 6: Data Visualization (Power BI)
+- Power BI connects directly to the Lakehouse
+- Data model is created using curated tables
+- Interactive dashboards include:
+  - KPIs
+  - Trends
+  - Filters and slicers
+- Enables business users to explore insights easily
+
+---
 
 ## 🛠️ Technologies Used
 - Microsoft Fabric
 - Data Factory
-- PySpark
 - OneLake / Lakehouse
+- PySpark
 - Power BI
 
-## 📊 Dashboard Preview
-![Dashboard](PowerBI/dashboard_screenshots.png)
+---
 
 ## 📌 Key Learnings
-- End-to-end data pipeline design
-- ELT with Microsoft Fabric
-- PySpark transformations
-- Power BI modeling and visualization
+- Designing an end-to-end ELT data pipeline
+- Working with Microsoft Fabric ecosystem
+- Using PySpark for scalable data transformations
+- Implementing layered architecture (Bronze, Silver, Gold)
+- Building analytics-ready datasets for Power BI
+
+---
+
+## 📊 Dashboard Preview
+![Power BI Dashboard](powerbi/dashboard_screenshots.png)
